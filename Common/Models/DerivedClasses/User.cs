@@ -60,10 +60,12 @@ namespace Common.Models.DerivedClasses
 
         public override bool Equals(object? obj)
         {
-            if (obj is not User other)
-                return false;
+            if (obj is User other)
+            {
+                return other.Name == Name;
+            }
 
-            return other.Name == Name;
+            return base.Equals(obj);
         }
 
         public bool Check()

@@ -70,7 +70,7 @@ namespace Common.Models.DerivedClasses
             if (obj is Admin other)
                 return (other.Name == this.Name) && (other.Password == this.Password) && (other.Id == other.Id);
 
-            return false;
+            return base.Equals(obj);
         }
 
         public bool Check()
