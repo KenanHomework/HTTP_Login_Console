@@ -27,7 +27,7 @@ namespace Client
 
             Console.Clear();
 
-            LoginStartAsync();
+            await LoginStartAsync();
 
 
             Console.ForegroundColor = ConsoleColor.DarkGreen;

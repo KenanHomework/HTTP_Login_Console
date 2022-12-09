@@ -65,7 +65,7 @@ namespace Server
                                                      (u.Password == user.Password);
                                           });
 
-            if (findResult.Check())
+            if (findResult != null &&  findResult.Check())
                 Response.StatusCode = 200;
             else
                 Response.StatusCode = 404;
